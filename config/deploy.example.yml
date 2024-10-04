@@ -1,0 +1,32 @@
+# Name of your application. Used to uniquely configure containers.
+service: homelab-day
+
+# the image name to be hosted in the registry
+image: zafranudindev/homelab-day
+
+servers:
+  # your homelab local network, e.g 172.168.0.5
+  web:
+    - 172.168.0.5
+
+proxy:
+  ssl: false
+  # your domain, e.g. homelab.day
+  host: homelab.day
+  app_port: 3100
+  forward_headers: true
+  healthcheck:
+    path: "/"
+
+ssh:
+  # User to ssh into your server. Example, root
+  user: root
+
+registry:
+  username:
+    - KAMAL_REGISTRY_USERNAME
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
