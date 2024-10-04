@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "homelab.day",
+  title: "Homelab - in one day",
   description: "Setup your homelab in one day.",
 };
 
