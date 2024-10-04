@@ -1,0 +1,38 @@
+---
+title: "Step 2: Prepare Bootable USB"
+---
+
+import Alert from "@/components/alert.tsx";
+import { Usb } from "lucide-react";
+
+In this step, we will setup a USB stick that will install our server operating system.
+
+Just consider it to be like installing Windows 11 into a new computer.
+
+### Begin Preparation
+
+You will need in this step:
+
+1. USB Stick, minimum 16GB <Usb className="inline border rounded-md px-0.5"/>
+2. Keyboard
+3. External Monitor (just this step)
+4. (Personal Computer) to configure the USB Stick to be bootable.
+
+For our server, I would suggest for you to use headless server. It is a server that does not have any Graphical User Interface (GUI), except plain simple terminal. GUI would usually consume resources, and since this is a server, you would rarely use the GUI but most of the time we will SSH into the server instead via terminal.
+
+You can connect your homelab system via an HDMI display port for initial setup. Afterwards, we can totally remove the HDMI and connect via LAN network.
+
+- [Go to MacOS Guide](https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview)
+- [Go to Windows Guide](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview)
+- [Go to Linux Guide](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview)
+
+<Alert
+  title="Careful"
+  message="We are about to format the USB stick, be sure it is an unused stick, or perform some backup first."
+/>
+
+### What's now?
+
+By now, you should have a bootable USB device. Not sure what it does? We will now head over to the next step!
+
+Notice how we have not touch anything on our homelab server yet.

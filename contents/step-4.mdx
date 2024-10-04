@@ -1,0 +1,28 @@
+---
+title: "Step 2: Prepare Bootable USB"
+---
+
+import Alert from "@/components/alert.tsx";
+import { Usb } from "lucide-react";
+
+Now, you can disconnect your USB from your Personal PC.
+
+The same USB device, you will now connect this to your Homelab (finally!)
+
+But instead of the normal boot or start up, we will do something different. With the USB device connected to Homelab, we should now boot into BIOS.
+
+Afterward, use the BIOS to boot from the USB device.
+
+Yes, you're not going to a believe that a whole Operating System is inside that tiny USB!
+
+### Caveat
+
+Different operating system boot into USB differently. Some would need to press certain F1, F2, F^ pattern on the keyboard. Some automatically boot from the USB.
+
+You can quickly google: **"\<hardware\> boot from USB ISO"**
+
+...where \<hardware\> is your Homelab server, such as Lenovo Thinkcentre, Raspberry PI, etc.
+
+When properly executed, you will boot into the Ubuntu Server installation setup.
+
+Once you can see the installer, let's head to the next step!
