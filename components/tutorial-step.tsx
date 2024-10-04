@@ -10,11 +10,23 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import Link from "next/link";
-import ReactFlow, { Background, Controls } from "reactflow";
 import "reactflow/dist/style.css";
-import { Usb } from "lucide-react";
 
-export function TutorialStep({ children, nextPageUrl, prevPageUrl, flow }) {
+export const dynamic = "force-dynamic";
+
+type Props = {
+  children: React.ReactNode;
+  nextPageUrl: string | null;
+  prevPageUrl: string | null;
+  flow: React.ReactNode;
+};
+
+export function TutorialStep({
+  children,
+  nextPageUrl,
+  prevPageUrl,
+  flow,
+}: Props) {
   return (
     <div className="min-h-screen max-h-screen h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
       <header className="p-4 border-b dark:border-gray-800">
