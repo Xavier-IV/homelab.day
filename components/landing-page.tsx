@@ -15,6 +15,14 @@ export function LandingPage() {
         <p className="max-w-[500px] text-gray-600 dark:text-gray-400 text-xl">
           Build your personal homelab server in your home, within one day.
         </p>
+        <div className="flex items-center justify-center">
+          <a href="https://github.com/Xavier-IV/homelab.day" target="_blank">
+            <img
+              alt="GitHub Repo stars"
+              src="https://img.shields.io/github/stars/Xavier-IV/homelab.day"
+            />
+          </a>
+        </div>
         <Button asChild size="lg" className="text-lg px-8">
           <Link href="/modules"> Get Started</Link>
         </Button>

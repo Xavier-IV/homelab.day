@@ -38,8 +38,8 @@ export default function Page() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Let's get your hand dirty with hands-on experience of building
-                  your first homelab.
+                  Let&apos;s get your hand dirty with hands-on experience of
+                  building your first homelab.
                 </p>
                 <br />
                 <p>We will setup your server for our upcoming modules.</p>
