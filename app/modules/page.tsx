@@ -1,12 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 
-const learningModules = [
-  { id: 1, title: "Module 1: Intro and setup" },
-  { id: 2, title: "Module 2: Connecting with SSH" },
-  { id: 3, title: "Module 3: Your first website" },
-];
-
 export default function Page() {
   return (
     <div className="min-h-screen max-h-screen h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
