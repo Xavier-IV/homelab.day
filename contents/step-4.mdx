@@ -9,11 +9,45 @@ Now, you can disconnect your USB from your Personal PC.
 
 The same USB device, you will now connect this to your Homelab (finally!)
 
+<Alert
+  title="Careful"
+  message="This guide WILL OVERWRITE your storage, be sure you are setting up on the Homelab server, not your Personal Computer."
+/>
+
 But instead of the normal boot or start up, we will do something different. With the USB device connected to Homelab, we should now boot into BIOS.
 
 Afterward, use the BIOS to boot from the USB device.
 
 Yes, you're not going to a believe that a whole Operating System is inside that tiny USB!
+
+As for the tutorial, Ubuntu already written a perfect guide that we can follow:
+
+[Go to Ubuntu Guide](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview)
+
+Just take note of these during the setup:
+
+- Remember your username and password, this will be used later to login
+- This process will overwrite your whole hard drive, think carefully.
+
+When you're booting into the Ubuntu Server installer, you can follow my screen record here.
+
+    <div className="video-wrapper">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/exrSQfpAIS8?si=a52RSYI3uNF0SiQ7"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+**Careful**: Just change the Xavier-IV to your Github account (otherwise it's pointless to have my public SSH in your server). This step is optional, if you'd like to connect via SSH.
+
+Otherwise we can always set this up manually later.
+
+**Get your local ip address**: At the end of the video, you'll notice how I check for my local IP address using `ip a`. We will need this later for upcoming setups.
 
 ### Caveat
 

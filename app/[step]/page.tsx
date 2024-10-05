@@ -3,6 +3,7 @@ import Step1 from "@/contents/step-1.mdx";
 import Step2 from "@/contents/step-2.mdx";
 import Step3 from "@/contents/step-3.mdx";
 import Step4 from "@/contents/step-4.mdx";
+import Step5 from "@/contents/step-5.mdx";
 
 import Step1Flow from "@/flow/step-1-flow";
 import Step2Flow from "@/flow/step-2-flow";
@@ -14,6 +15,7 @@ const steps: Record<string, React.FC> = {
   "step-2": Step2,
   "step-3": Step3,
   "step-4": Step4,
+  "step-5": Step5,
 };
 
 const flows: Record<string, React.FC> = {
@@ -21,6 +23,7 @@ const flows: Record<string, React.FC> = {
   "step-2": Step1Flow,
   "step-3": Step2Flow,
   "step-4": Step3Flow,
+  "step-5": Step3Flow,
 };
 
 export default function Page({ params }: { params: { step: string } }) {

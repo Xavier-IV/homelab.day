@@ -16,7 +16,7 @@ export function LandingPage() {
           Build your personal homelab server in your home, within one day.
         </p>
         <Button asChild size="lg" className="text-lg px-8">
-          <Link href="/step-1"> Get Started</Link>
+          <Link href="/modules"> Get Started</Link>
         </Button>
         <p className="text-sm text-gray-400 dark:text-gray-500 italic mt-8">
           Psst, this domain is hosted on a homelab too!

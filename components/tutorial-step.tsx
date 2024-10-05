@@ -28,7 +28,7 @@ export function TutorialStep({
   flow,
 }: Props) {
   return (
-    <div className="min-h-screen max-h-screen h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
+    <div className="min-h-screen max-h-screen h-screen bg-gray-50 flex flex-col">
       <header className="p-4 border-b dark:border-gray-800">
         <nav className="flex justify-between items-center max-w-7xl px-2 md:px-10 mx-auto">
           <Link href="/">
@@ -82,7 +82,7 @@ export function TutorialStep({
         </Card>
 
         {/* react flow here */}
-        <div className="w-full h-full min-h-[300px] p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="w-full mx-auto max-w-full h-full min-h-[300px] p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
           {flow}
         </div>
       </main>
