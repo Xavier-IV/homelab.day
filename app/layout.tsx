@@ -16,6 +16,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Homelab - in one day",
   description: "Setup your homelab in one day.",
+  metadataBase: new URL("https://homelab.day"),
+  openGraph: {
+    url: new URL(process.env.NEXT_PUBLIC_WEB_URL!),
+    type: "website",
+  },
 };
 
 export default function RootLayout({
