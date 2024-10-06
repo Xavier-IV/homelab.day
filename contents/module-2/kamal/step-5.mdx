@@ -1,0 +1,52 @@
+The error is because our server are not intended to have root access from ssh.
+
+Kamal need to have elevated priviledge to run this as root. Behind the scene, kamal will run:
+
+```bash
+# just for demonstration
+$ ssh root@192.168.178.42
+```
+
+If you try to login as root to your server, you will get:
+
+```
+root@192.168.178.42: Permission denied (publickey).
+```
+
+So we are going to fix it in this step!
+
+### SSH into your server as normal user
+
+We will first ssh into our Homelab Server as normal user, and then run elevated command.
+
+```bash
+# change accordingly
+$ ssh zafranudin-demo@192.168.178.42
+```
+
+Then, we will elevate our user, and edit the authorized_keys
+
+```bash
+# when prompted, enter your password
+sudo su
+
+# change <github_username> to yours
+curl -s https://github.com/<github_username>.keys >> ~/.ssh/authorized_keys
+
+# verify authorized_keys populated
+cat ~/.ssh/authorized_keys
+
+# exit the root session
+exit
+
+# exit your normal session
+exit
+```
+
+Now if you exited that SSH, and try to login as `root`, it will now work!
+
+```
+ssh root@192.168.178.42
+```
+
+Now that we know **why** kamal fails, and the concern behind it, we can proceed to our step earlier.

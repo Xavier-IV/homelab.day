@@ -1,0 +1,46 @@
+import ImagePreview from "@/components/image-preview";
+
+We will continue where we left off earlier.
+
+```bash
+export KAMAL_REGISTRY_PASSWORD=<your_docker_password_earlier>
+kamal setup
+```
+
+If you're interested on what Kamal did behind the scene, check the official docs:
+[Official Docs](https://kamal-deploy.org/docs/installation/)
+
+While the command is still running, you can try to grasp what's happening, but ideally, it is:
+
+1. Building docker image for you, using your Dockerfile
+2. Uploading it to your Docker Hub we register earlier
+3. SSH-ing into our server, setup Docker if not installed
+4. Pull that image that was uploaded earlier, into the homelab server
+5. Spin up everything, including Kamal Proxy.
+
+### What now?
+
+If there's no error with Kamal, you should see this. It's a music to the ears.
+
+<ImagePreview
+  originalSrc="/module-2/kamal/step-6_01.png"
+  previewSrc="/module-2/kamal/step-6_01.png"
+  alt="Result of ssh"
+/>
+
+If you are not seeing any error, let's quickly ssh into our homelab server to see if our docker images are up and running.
+
+```bash
+ssh zafranudin-demo@192.168.178.42
+sudo docker ps
+```
+
+<ImagePreview
+  originalSrc="/module-2/kamal/step-6_02.png"
+  previewSrc="/module-2/kamal/step-6_02.png"
+  alt="Result of ssh"
+/>
+
+This mean everything is working fine!
+
+I've also updated our diagram to reflect our new infrastructure.

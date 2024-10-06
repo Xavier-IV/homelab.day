@@ -73,20 +73,24 @@ export default function Page() {
             </Card>
           </Link>
 
-          <Card
-            key={module.id}
-            className="hover:shadow-lg min-h-[200px] bg-gray-200 text-gray-400"
+          <Link
+            href={`/modules/module-2/kamal/step-1`}
+            className="text-blue-600 dark:text-blue-400"
           >
-            <CardHeader>
-              <h2 className="text-2xl font-semibold">Deploying your Website</h2>
-            </CardHeader>
-            <CardContent>
-              <p>
-                We will now use Kamal and Docker to quickly deploy our first
-                web-app!
-              </p>
-            </CardContent>
-          </Card>
+            <Card key={module.id} className="hover:shadow-lg min-h-[200px]">
+              <CardHeader>
+                <h2 className="text-2xl font-semibold">
+                  Deploying your Website
+                </h2>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  We will now use Kamal and Docker to quickly deploy our first
+                  web-app!
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </main>
     </div>

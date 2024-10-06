@@ -1,0 +1,47 @@
+import ImagePreview from "@/components/image-preview";
+
+Now that our hard work is done, how can we validate it?
+
+Not yet, for full setup, we need to buy a domain (I'll create a new lesson).
+
+But we can verify as follow.
+
+In your Personal Computer browesr, head over to your `<homelab_ip_address>:80`, in my case: 192.168.178.42:80
+
+If it works, you should see Kamal Proxy default 404 (don't worry, that is expected!)
+
+<ImagePreview
+  originalSrc="/module-2/kamal/step-7_01.jpeg"
+  previewSrc="/module-2/kamal/step-7_01.jpeg"
+  alt="Result of ssh"
+/>
+
+We could trick our network to "think" we already bought a domain, we can do this by updating our networking.
+
+```
+# change accordingly to your ip_address,
+# and your domain you put inside config/deploy.yml earlier
+echo "192.168.178.42 homelab.my-local-network.com" | sudo tee -a /etc/hosts
+
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+```
+
+Remember the `homelab.my-local-network.com` where you copied inside the `config/deploy.yml`? Yep, now my promise to you are fulfilled.
+
+<ImagePreview
+  originalSrc="/module-2/kamal/step-7_02.png"
+  previewSrc="/module-2/kamal/step-7_02.png"
+  alt="Result of ssh"
+/>
+
+Notice the URL in my browser, it works!
+
+Or just copy this url and try on your own:
+
+[http://homelab.my-local-network.com:80](http://homelab.my-local-network.com:80)
+
+Unfortunately, this only work on your own Personal PC. What this mean is, if you open the url from your browser, you won't see anything. But we will fix this by upcoming lessons to purchase domain, and let the whole world see our homelab homepage!
+
+Ultimately you now have solid understanding on how to deploy with Kamal.
+
+In my next few tutorial, we will purchase a domain, and complete this tutorial altogether!

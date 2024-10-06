@@ -1,0 +1,91 @@
+import ImagePreview from "@/components/image-preview";
+
+Kamal provided a good resource on how to set it up.
+
+I recommend for you to use the recommended `ruby` installation.
+
+[Install Kamal](https://kamal-deploy.org/docs/installation/)
+
+This is done on your **Personal Computer**.
+
+Verify everything is installed correctly, by:
+
+```bash
+kamal version
+```
+
+It should output its latest version.
+
+Afterwards, setup Docker Hub account. We will host our Docker images here and use the public free images.
+
+### Initiating Kamal
+
+Now that the gem is installed, you can now begin the init setup.
+
+```bash
+kamal init
+```
+
+This will add a bunch of files, but we should focus on `config/deploy.yml`.
+
+Replace everything accordingly as follow:
+
+This can be confusing, I know, but it's pretty simple as follow:
+
+1. If you do not have a domain, don't worry, we will configure in a separate learning module.
+2. `servers.web` is the **IP Address of your homelab**. Still remember?
+3. `registry.username` is your Docker username earlier.
+4. `image` is the docker registry repository from the previous step.
+   - Mine is `zafranudindev/demo-homelab-day`.
+   - Replace the `<replace_me>` with yours.
+5. `proxy.host` take note of this, even if you haven't buy any domain yet. See the end of tutorial later for why.
+
+Edit `config/deploy.yml`.
+
+```yml
+# Name of your application. Used to uniquely configure containers.
+service: demo-homelab-day
+
+# the image name to be hosted in the registry
+image: <replace_me>/demo-homelab-day
+
+servers:
+  # your homelab local network, e.g 172.168.0.5
+  web:
+    - 172.168.0.5
+
+proxy:
+  ssl: false
+  # don't  change for now, you'll see by the end of tutorial
+  host: homelab.my-local-network.com
+  app_port: 5000
+  forward_headers: true
+  healthcheck:
+    path: "/"
+
+registry:
+  # change to your docker username
+  username: <change_me>
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
+```
+
+### Run Kamal setup
+
+With everything in place, let us start the setup!
+
+```
+export KAMAL_REGISTRY_PASSWORD=<your_docker_password_earlier>
+kamal setup
+```
+
+<ImagePreview
+  originalSrc="/module-2/kamal/step-4_01.png"
+  previewSrc="/module-2/kamal/step-4_01.png"
+  alt="Result of ssh"
+/>
+
+You will face an error, that is OK and intended. Let us proceed to the next step!

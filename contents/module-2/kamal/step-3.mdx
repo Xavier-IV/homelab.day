@@ -1,0 +1,53 @@
+In this step, we will setup Kamal and also register for free Docker Hub account.
+
+1. Install Kamal
+2. Registry Docker Hub
+3. Create Docker token
+
+### 1. Install Kamal
+
+Kamal provided a good resource on how to set it up.
+
+I recommend for you to use the recommended `ruby` installation.
+
+[Install Kamal](https://kamal-deploy.org/docs/installation/)
+
+This is done on your **Personal Computer**.
+
+Verify everything is installed correctly, by:
+
+```bash
+kamal version
+```
+
+It should output its latest version.
+
+Afterwards, setup Docker Hub account. We will host our Docker images here and use the public free images.
+
+### 2. Register Free Docker Hub Account
+
+Head over to hub.docker.com, and register your account (if you have not one).
+
+[Register in Docker Hub](https://hub.docker.com)
+
+Once registered, create a new public repository.
+
+[Create New Repository](https://hub.docker.com/repository/create)
+
+Take note of the Repository Name, you will need it later. For example, mine is `zafranudindev/demo-homelab-day`.
+
+### 3. Get your Docker token
+
+This step is simply to let Kamal upload an image for you automatically.
+
+Head over to:
+
+1. Account Setting [Go to](https://app.docker.com/settings)
+2. Under **Security > Personal access tokens**, click **Generate new token**.
+
+   - Set description as: Kamal Local
+   - Access permissions: "Read, Write, Delete"
+
+3. Take note of this token, and store it safely.
+
+Now that the hard part is done, let us proceed for the fun part!
