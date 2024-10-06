@@ -23,7 +23,10 @@ export default function Page() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 not-prose">
-          <Link href={`/step-1`} className="text-blue-600 dark:text-blue-400">
+          <Link
+            href={`/modules/module-1/step-1`}
+            className="text-blue-600 dark:text-blue-400"
+          >
             <Card key={module.id} className="hover:shadow-lg">
               <CardHeader>
                 <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
@@ -53,20 +56,22 @@ export default function Page() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-6 not-prose">
-          <Card
-            key={module.id}
-            className="hover:shadow-lg min-h-[200px] bg-gray-200 text-gray-400"
+          <Link
+            href={`/modules/module-2/ssh/step-1`}
+            className="text-blue-600 dark:text-blue-400"
           >
-            <CardHeader>
-              <h2 className="text-2xl font-semibold">Connecting with SSH</h2>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Now that your server is up, we need to figure out how to connect
-                and get into it.
-              </p>
-            </CardContent>
-          </Card>
+            <Card key={module.id} className="hover:shadow-lg min-h-[200px]">
+              <CardHeader>
+                <h2 className="text-2xl font-semibold">Connecting with SSH</h2>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Now that your server is up, we need to figure out how to
+                  connect and get into it.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
 
           <Card
             key={module.id}

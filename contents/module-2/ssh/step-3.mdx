@@ -1,0 +1,34 @@
+import Image from "next/image";
+import ImagePreview from "@/components/image-preview";
+
+Now that you've learned the basic, let us execute this command:
+
+```
+ip a
+```
+
+It will print some fancy hacker-like output, but we just want to see what is our IP Address.
+
+<ImagePreview
+  previewSrc="/module-2/ssh/step-2_01.png"
+  originalSrc="/module-2/ssh/step-2_01.png"
+  alt="Result of ip a command"
+/>
+
+In this case, my IP Address is `192.168.178.42`. To make sure it is a valid IP, try to ping it. It's like shouting "ping" and someone will reply "pong".
+
+```bash
+ping 192.168.178.42
+```
+
+It will then output the 'pong' part.
+
+<ImagePreview
+  previewSrc="/module-2/ssh/step-2_02.png"
+  originalSrc="/module-2/ssh/step-2_02.png"
+  alt="Result of ping"
+/>
+
+Yes, it is safe for me to show you this IP, as it is my local address. Only the network within my house can access this system.
+
+To stop the endless output from the 'pong', simply press `CTRL + C` on your keyboard.

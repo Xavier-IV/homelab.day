@@ -1,0 +1,57 @@
+import ImagePreview from "@/components/image-preview";
+
+Now, let's head to your Personal PC (notice the diagram now switched to Personal PC).
+
+I've also removed the internet from the diagram to not confuse us.
+
+What we are about to do, is exactly running without internet.
+
+All are via the router or your local network!
+
+### Connect via SSH
+
+Just like how we connect via the monitor earlier (username, password), we now can do the same via your Personal PC.
+
+Run this command, and replace your `<ip address>` with your own IP Address.
+
+```bash
+ping <your_homelab_ip>
+```
+
+You should see the same output like earlier. This mean your Personal PC is connected to the Homelab Server!
+
+Next, let's log into that Homelab server.
+
+```
+ssh <your_username>@<your_homelab_ip>
+```
+
+For example, in my case, it will be:
+
+```
+ssh zafranudin-demo@192.168.178.42
+```
+
+<ImagePreview
+  previewSrc="/module-2/ssh/step-5_01.png"
+  originalSrc="/module-2/ssh/step-5_01.png"
+  alt="Result of ssh"
+/>
+
+Since this is the first time we are connecting to it, it will ask us to verify.
+
+Just type `yes` and press enter.
+
+And just like that, you are now connected to your Homelab!
+
+No monitor, no keyboard, just power supply and Ethernet/Wifi connection!
+
+<ImagePreview
+  previewSrc="/module-2/ssh/step-5_02.png"
+  originalSrc="/module-2/ssh/step-5_02.png"
+  alt="Result of ssh"
+/>
+
+I still get excited everytime I see this output. It is like a magic...
+
+Oh yeah, the diagram is updated too. Both are now green!

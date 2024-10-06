@@ -18,6 +18,7 @@ type Props = {
   children: React.ReactNode;
   nextPageUrl: string | null;
   prevPageUrl: string | null;
+  title?: string;
   flow: React.ReactNode;
 };
 
@@ -26,6 +27,7 @@ export function TutorialStep({
   nextPageUrl,
   prevPageUrl,
   flow,
+  title,
 }: Props) {
   return (
     <div className="min-h-screen max-h-screen h-screen bg-gray-50 flex flex-col">
@@ -47,7 +49,7 @@ export function TutorialStep({
       <main className="p-4 h-full max-h-full flex-grow w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-10">
         <Card className="w-full h-full max-h-full col-span-2 mx-auto pb-0">
           <CardHeader className="prose">
-            <h2 className="p-0 m-0">Getting Started</h2>
+            <h2 className="p-0 m-0">{title}</h2>
           </CardHeader>
           <CardContent>
             <ScrollArea className="h-[calc(100vh-20rem)]">
