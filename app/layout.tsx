@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Setup your homelab in one day.",
   metadataBase: new URL("https://homelab.day"),
   openGraph: {
-    url: new URL(process.env.NEXT_PUBLIC_WEB_URL!),
+    url: new URL("https://homelab.day"),
     type: "website",
   },
 };
