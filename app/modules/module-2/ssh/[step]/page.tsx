@@ -7,7 +7,7 @@ import Step5 from "@/contents/module-2/ssh/step-5.mdx";
 import Step6 from "@/contents/module-2/ssh/step-6.mdx";
 
 import Step1Flow from "@/flow/module-2/ssh/step-1-flow";
-import Step3Flow from "@/flow/module-2/ssh/step-3-flow";
+import Step2Flow from "@/flow/module-2/ssh/step-2-flow";
 import { redirect } from "next/navigation";
 
 const steps: Record<string, React.FC> = {
@@ -30,8 +30,8 @@ const flows: Record<string, React.FC> = {
   "step-2": Step1Flow,
   "step-3": Step1Flow,
   "step-4": Step1Flow,
-  "step-5": Step3Flow,
-  "step-6": Step3Flow,
+  "step-5": Step2Flow,
+  "step-6": Step2Flow,
 };
 
 export default function Page({ params }: { params: { step: string } }) {
