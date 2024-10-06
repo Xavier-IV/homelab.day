@@ -4,7 +4,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { createPortal } from "react-dom";
 
-export default function ImagePreview({ previewSrc, originalSrc, alt }) {
+type Props = {
+  previewSrc: string;
+  originalSrc: string;
+  alt: string;
+};
+
+export default function ImagePreview({ previewSrc, originalSrc, alt }: Props) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleOpenFullscreen = () => {

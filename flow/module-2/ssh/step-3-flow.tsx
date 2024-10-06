@@ -1,6 +1,5 @@
 "use client";
 
-import { Usb } from "lucide-react";
 import ReactFlow, { Background, Controls } from "reactflow";
 
 export default function Step3Flow() {
