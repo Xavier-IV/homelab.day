@@ -1,10 +1,14 @@
 FROM imbios/bun-node:20-slim AS deps
 ARG DEBIAN_FRONTEND=noninteractive
 
-# I use Asia/Jakarta as my timezone, you can change it to your timezone
+# Refresh GPG keys and fix invalid signature issues
+RUN apt-get -y update && \
+  apt-get install -y --no-install-recommends gnupg && \
+  apt-key update
+
 RUN apt-get -y update && \
   apt-get install -yq openssl git ca-certificates tzdata && \
-  ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime && \
+  ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
   dpkg-reconfigure -f noninteractive tzdata
 WORKDIR /app
 
