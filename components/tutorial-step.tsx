@@ -51,14 +51,14 @@ export function TutorialStep({
           <CardHeader className="prose">
             <h2 className="p-0 m-0">{title}</h2>
           </CardHeader>
-          <CardContent>
+          <CardContent className="overflow-y-auto h-[calc(100vh-10rem)]">
             <ScrollArea className="h-[calc(100vh-20rem)]">
               <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
                 {children}
               </article>
             </ScrollArea>
           </CardContent>
-          <CardFooter className="grid grid-cols-3 gap-2 w-full pt-0 md:pt-4">
+          <CardFooter className="grid grid-cols-3 gap-2 w-full pt-0 md:pt-4 sticky bottom-0 bg-white dark:bg-gray-800">
             {prevPageUrl ? (
               <Button variant="outline" className="w-fit" asChild>
                 <Link href={prevPageUrl}>Previous</Link>
