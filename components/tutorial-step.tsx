@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +8,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import Link from "next/link";
+import React from "react";
 import "reactflow/dist/style.css";
 import Header from "./header";
 
