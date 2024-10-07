@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import "reactflow/dist/style.css";
+import Header from "./header";
 
 export const dynamic = "force-dynamic";
 
@@ -31,15 +32,7 @@ export function TutorialStep({
 }: Props) {
   return (
     <div className="min-h-screen max-h-screen h-screen bg-gray-50 flex flex-col">
-      <header className="p-4 border-b dark:border-gray-800">
-        <nav className="flex justify-between items-center max-w-7xl px-2 md:px-10 mx-auto">
-          <Link href="/">
-            <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              homelab.day
-            </h1>
-          </Link>
-        </nav>
-      </header>
+      <Header />
 
       <div className="w-full h-fit px-2 py-2 flex items-center bg-red-300 text-red-900 text-center justify-center text-sm">
         This document is still being written. Only for reading purpose...for

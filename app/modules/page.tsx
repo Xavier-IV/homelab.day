@@ -1,18 +1,11 @@
+import Header from "@/components/header";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <div className="min-h-screen max-h-screen h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
-      <header className="p-4 border-b dark:border-gray-800">
-        <nav className="flex justify-between items-center max-w-7xl px-2 md:px-10 mx-auto">
-          <Link href="/">
-            <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              homelab.day
-            </h1>
-          </Link>
-        </nav>
-      </header>
+      <Header />
 
       <main className="w-full max-w-7xl px-5 md:px-10 md:mx-auto prose">
         <div className="pl-1">
