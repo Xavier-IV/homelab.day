@@ -21,7 +21,7 @@ FROM deps AS builder
 WORKDIR /app
 COPY . .
 
-RUN bun run build
+RUN bun run build && ls -la .next
 
 # Production image, copy all the files and run next
 FROM node:20-slim AS runner
@@ -31,7 +31,17 @@ ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-COPY --from=builder  /app/.next/standalone ./
+# COPY --from=builder  /app/.next/standalone ./
+# COPY --from=builder /app/.next/static ./.next/static
+
+# Copy the standalone output
+COPY --from=builder /app/.next/standalone ./
+
+# Manually copy the static and public files
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+
+
 
 EXPOSE 3100
 
