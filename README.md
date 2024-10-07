@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtc2VydmVyIj48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iOCIgeD0iMiIgeT0iMiIgcng9IjIiIHJ5PSIyIi8+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjgiIHg9IjIiIHk9IjE0IiByeD0iMiIgcnk9IjIiLz48bGluZSB4MT0iNiIgeDI9IjYuMDEiIHkxPSI2IiB5Mj0iNiIvPjxsaW5lIHgxPSI2IiB4Mj0iNi4wMSIgeTE9IjE4IiB5Mj0iMTgiLz48L3N2Zz4=" width="30%" />
+  <br/>
+  <br/>
+  <strong>homelab.day</strong>
+</h1>
 
-## Getting Started
+<p align="center">
+  "A practical guide to building your own homelab and deploying web applications with ease."
+</p>
 
-First, run the development server:
+<p align="center">
+  Learn how to set up a server, connect using SSH, and deploy websites using Docker and Kamal. <br/>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  Open for contributions!
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Table of Contents
+- [Introduction](#introduction)
+- [Modules](#modules)
+- [Contributing](#contributing)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Introduction
+**[homelab.day](https://homelab.day)** is a step-by-step guide to help you build your own homelab environment, where you can deploy projects, experiment with different tools, and improve your hands-on skills in server management and deployment.
 
-## Learn More
+## Modules
+- [Module 1](https://homelab.day/modules/module-1/step-1): Getting Started - Set up your server and prepare for the homelab environment.
+- [Module 2](https://homelab.day/modules/module-2/ssh/step-1): Real World Usage - Connect with SSH and deploy a website using Kamal and Docker (in progress).
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+We welcome contributions! Feel free to open issues or submit pull requests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[<img src="https://github.com/Xavier-IV.png" width="30px;"/>](https://github.com/Xavier-IV) 
+[<img src="https://github.com/Vishal-Gori.png" width="30px;"/>](https://github.com/Vishal-Gori)
+[<img src="https://github.com/khrnchn.png" width="30px;"/>](https://github.com/khrnchn)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
