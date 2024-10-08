@@ -66,7 +66,7 @@ export function TutorialStep({
             </div>
           </CardHeader>
           <CardContent className="overflow-y-auto flex-grow">
-            <div className="prose prose-sm h-full pr-4 hide-scrollbar">
+            <div className="prose prose-sm h-full pr-4">
               <h2 className="p-0 m-0 text-gray-900 dark:text-gray-100">
                 {title}
               </h2>
