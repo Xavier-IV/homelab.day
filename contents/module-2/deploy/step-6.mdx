@@ -1,0 +1,52 @@
+import ImagePreview from "@/components/image-preview";
+
+Now that our DNS is configured, we need to allow user to connect to our homelab.
+
+We can use Cloudflare Tunnel to handle this reverse proxy, and allowing the internet to now see our web app!
+
+In Cloudflare Dashboard:
+
+1. Click "Zero Trust" tab on the left
+2. A new page open, then on the left, click "Networks" > "Tunnels"
+3. Click "+ CReate a tunnel"
+
+When prompted, choose recommended "Cloudflared".
+
+When prompted for "Name your tunnel", give it a fancy name. I gave mine "Homelab".
+
+You will then be prompted to install cloudflared CLI in the server (not your personal computer).
+
+Select "Debian" and your architecture (mine is 64-bit).
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-6_01.png"
+  previewSrc="/module-2/deploy/step-6_01.png"
+  alt="Result of ssh"
+/>
+
+Simply copy the whole script, and paste it into your server. You will need to SSH first into your server if you have not.
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-6_02.png"
+  previewSrc="/module-2/deploy/step-6_02.png"
+  alt="Result of ssh"
+/>
+
+Once that is done, at the top, click on "Public Hostname" tab, and click "+ Add a public hostname".
+
+1. Domain: \<your domain you purchased\>
+2. Type: HTTP
+3. URL: localhost
+4. HTTP Settings > HTTP Host Header: \<your domain you purchased\>
+
+Here is a sample of mine:
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-6_03.png"
+  previewSrc="/module-2/deploy/step-6_03.png"
+  alt="Result of ssh"
+/>
+
+Then click "Save hostname"!
+
+After saving, we will go back to our code we deployed from Kamal earlier.

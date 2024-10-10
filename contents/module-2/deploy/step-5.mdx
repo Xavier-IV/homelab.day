@@ -1,0 +1,57 @@
+import ImagePreview from "@/components/image-preview";
+import Alert from "@/components/alert";
+
+In cloudflare, under **Websites** page, click on **+ Add a domain**.
+
+Don't worry, we are not buying a second domain. We just want to 'register' the domain we have bought from Namecheap earlier.
+
+Under **Enter an existing domain**, type in the domain you've purchased earlier.
+
+Click "Continue"
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-5_01.png"
+  previewSrc="/module-2/deploy/step-5_01.png"
+  alt="Result of ssh"
+/>
+
+It will prompt that there's no _DNS Record_ yet, and that is fine.
+
+What we need for now, is the "Nameserver".
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-5_02.png"
+  previewSrc="/module-2/deploy/step-5_02.png"
+  alt="Result of ssh"
+/>
+
+In my case, these are my Cloudflare's nameserver.
+
+Copy both, and paste it into Namecheap. It should be under "Nameservers" > Choose "Customer DNS" in the dropdown.
+
+Be sure to click the **Green Checkbox** to save!
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-5_03.png"
+  previewSrc="/module-2/deploy/step-5_03.png"
+  alt="Result of ssh"
+/>
+
+Once you've saved this in Namecheap, we can now close Namecheap. That's the last we will need it.
+
+From now, all of DNS entry will be via Cloudflare, and Cloudflare will be responsible for it.
+
+Finally, let's inform Cloudflare to actively check if the nameserver change is successful or not. Simply click the "Check Nameserver" button.
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-5_03.png"
+  previewSrc="/module-2/deploy/step-5_03.png"
+  alt="Result of ssh"
+/>
+
+This will take some time, from few minutes to several hours. Most of the time, it should take less than an hour. You will receive an email from Cloudflare once they have noticed the nameserver change.
+
+<Alert
+  title="Careful"
+  message="You will need to copy exactly both nameservers from Cloudflare into Namecheap. Otherwise you will be locked out of your own domain, which is not what we want at all."
+/>

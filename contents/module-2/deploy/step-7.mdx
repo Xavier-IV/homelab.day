@@ -1,0 +1,21 @@
+import ImagePreview from "@/components/image-preview";
+
+Here, we will only need to change our `proxy.host`.
+
+In my case, I am changing this to `zafranudin.my`. Most of the other config can remain the same.
+
+Here's a sample from my Kamal config.
+
+<ImagePreview
+  originalSrc="/module-2/deploy/step-7_01.png"
+  previewSrc="/module-2/deploy/step-7_01.png"
+  alt="Result of ssh"
+/>
+
+Now, simply run deploy command.
+
+```
+kamal deploy
+```
+
+Since we already set up our Kamal in previous lesson, here we only need to run `deploy` only.

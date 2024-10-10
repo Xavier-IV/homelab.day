@@ -101,9 +101,30 @@ export default function Page() {
               </CardContent>
             </Card>
           </Link>
+
+          <Link
+            href={`/modules/module-2/deploy/step-1`}
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+          >
+            <Card
+              key={module.id}
+              className="hover:shadow-lg transition-shadow duration-300 min-h-[200px] bg-white dark:bg-gray-800"
+            >
+              <CardHeader>
+                <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
+                  Releasing to Internet
+                </h2>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Now that our basic web app is set up, we can start sharing our
+                  project with the world!
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </main>
     </div>
   );
 }
-

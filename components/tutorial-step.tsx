@@ -65,12 +65,12 @@ export function TutorialStep({
               )}
             </div>
           </CardHeader>
-          <CardContent className="overflow-y-auto flex-grow">
-            <div className="prose prose-sm h-full pr-4 hide-scrollbar">
+          <CardContent className="overflow-y-auto flex-grow max-w-full w-full">
+            <div className="prose prose-sm h-full w-full max-w-full pr-4 hide-scrollbar">
               <h2 className="p-0 m-0 text-gray-900 dark:text-gray-100">
                 {title}
               </h2>
-              <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
+              <article className="prose prose-sm md:prose-base dark:prose-invert w-full">
                 {children}
               </article>
             </div>
